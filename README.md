@@ -15,6 +15,11 @@ using ScotchBoardSQL;
 
 </p>
 
+https://img.shields.io/badge/dynamic/json.svg?<br>
+</br>label=download<br>
+</br>&url=https://api.github.com/repos/ChiuRobert/SQL_API/releases/latest<br>
+</br>&query=$.assets[0].name<br></br>&style=for-the-badge
+
 ### Documentation
 
 For SELECT queries:
