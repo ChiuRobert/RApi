@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14C611B7-6010-4C63-B710-A4E5653AE821}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScotchBoardSQL</RootNamespace>
+    <AssemblyName>ScotchBoardSQL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ScotchBoardSQL.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cleaner\QueryCleaner.cs" />
+    <Compile Include="Decorator\DeleteQuery.cs" />
+    <Compile Include="Decorator\Expressions\Column.cs" />
+    <Compile Include="Decorator\Expressions\Execution.cs" />
+    <Compile Include="Decorator\Expressions\Expression.cs" />
+    <Compile Include="Decorator\Expressions\ExtendedValue.cs" />
+    <Compile Include="Decorator\Expressions\InsertColumn.cs" />
+    <Compile Include="Decorator\Expressions\InsertValue.cs" />
+    <Compile Include="Decorator\Expressions\Order.cs" />
+    <Compile Include="Decorator\Expressions\UpdateColumn.cs" />
+    <Compile Include="Decorator\Expressions\UpdateValue.cs" />
+    <Compile Include="Decorator\Expressions\Value.cs" />
+    <Compile Include="Decorator\Expressions\Where.cs" />
+    <Compile Include="Decorator\InsertQuery.cs" />
+    <Compile Include="Decorator\QueryDecorator.cs" />
+    <Compile Include="Decorator\SelectQuery.cs" />
+    <Compile Include="Decorator\UpdateQuery.cs" />
+    <Compile Include="IDeleteQuery.cs" />
+    <Compile Include="IInsertQuery.cs" />
+    <Compile Include="IQuery.cs" />
+    <Compile Include="ISelectQuery.cs" />
+    <Compile Include="IUpdateQuery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
