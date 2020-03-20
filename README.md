@@ -15,10 +15,7 @@ using ScotchBoardSQL;
 
 </p>
 
-https://img.shields.io/badge/dynamic/json.svg?<br>
-</br>label=download<br>
-</br>&url=https://api.github.com/repos/ChiuRobert/SQL_API/releases/latest<br>
-</br>&query=$.assets[0].name<br></br>&style=for-the-badge
+[![Download API](https://img.shields.io/badge/download-laps.zip-blue?style=for-the-badge)](https://github.com/ChiuRobert/SQL_API/releases/latest/download/ScotchBoardSQL.dll)
 
 ### Documentation
 
