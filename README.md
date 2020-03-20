@@ -15,8 +15,6 @@ using ScotchBoardSQL;
 
 </p>
 
-[![Download API](https://img.shields.io/badge/download-laps.zip-blue?style=for-the-badge)](https://github.com/ChiuRobert/SQL_API/releases/latest/download/ScotchBoardSQL.dll)
-
 ### Documentation
 
 For SELECT queries:
@@ -79,3 +77,5 @@ with the outcome:
 ```SQL
 DELETE FROM tableName WHERE columnName = John Smith;
 ```
+
+[![Download API](https://img.shields.io/badge/download-API-blue?style=for-the-badge)](https://github.com/ChiuRobert/SQL_API/releases/latest/download/ScotchBoardSQL.dll)
