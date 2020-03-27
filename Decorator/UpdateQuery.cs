@@ -9,7 +9,7 @@ namespace ScotchBoardSQL.Decorator
     {
         public UpdateQuery(Query query) : base(query)
         {
-            QueryExtension("UPDATE " + query.table + " SET ");
+            QueryExtension("UPDATE \"" + query.schema + "\".\"" + query.table + "\" SET ");
         }
 
         /// <summary>

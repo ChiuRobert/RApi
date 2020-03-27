@@ -7,7 +7,7 @@
     {
         public UpdateValue(string value, Query query) : base(query)
         {
-            QueryExtension(value + ", ");
+            QueryExtension("\"" + value + "\", ");
         }
 
         public UpdateValue(double value, Query query) : base(query)

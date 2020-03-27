@@ -9,7 +9,7 @@ namespace ScotchBoardSQL.Decorator
     {
         public SelectQuery(Query query) : base(query)
         {
-            QueryExtension("SELECT * FROM " + query.table);
+            QueryExtension("SELECT * FROM \"" + query.schema + "\".\"" + query.table + "\"");
         }
 
         /// <summary>

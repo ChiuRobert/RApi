@@ -9,13 +9,13 @@
         {
             if (!value.Equals(""))
             {
-                QueryExtension(value + ", ");
+                QueryExtension("\"" + value + "\", ");
             }
         }
 
         public InsertValue(double value, Query query) : base(query)
         {
-            QueryExtension(value + ", ");
+            QueryExtension("\"" + value + "\", ");
         }
 
         /// <summary>

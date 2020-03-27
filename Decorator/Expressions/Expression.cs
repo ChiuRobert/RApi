@@ -25,13 +25,11 @@ namespace ScotchBoardSQL.Decorator.Expressions
             if (valueType == typeof(Value))
             {
                 Value valueObject = new Value(value, query);
-                FormatQuery(value.ToString().Length);
 
                 return  (T)Convert.ChangeType(valueObject, typeof(T));
             }
 
             ExtendedValue extendedValueObject = new ExtendedValue(value, query);
-            FormatQuery(value.ToString().Length);
 
             return (T)Convert.ChangeType(extendedValueObject, typeof(T));
         }
@@ -49,13 +47,11 @@ namespace ScotchBoardSQL.Decorator.Expressions
             if (valueType == typeof(Value))
             {
                 Value valueObject = new Value(value, query);
-                FormatQuery(value.Length);
 
                 return (T)Convert.ChangeType(valueObject, typeof(T));
             }
 
             ExtendedValue extendedValueObject = new ExtendedValue(value, query);
-            FormatQuery(value.Length);
 
             return (T)Convert.ChangeType(extendedValueObject, typeof(T));
         }

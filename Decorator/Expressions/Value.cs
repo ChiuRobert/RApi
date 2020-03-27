@@ -5,12 +5,14 @@
     /// </summary>
     public class Value : QueryDecorator
     {
-        public Value(string value, Query query) : base(value, query)
+        public Value(Query query) : base(query) { }
+    
+        public Value(string value, Query query) : base(query)
         {
-            QueryExtension(value);
+            QueryExtension("\"" + value + "\"");
         }
 
-        public Value(double value, Query query) : base(value.ToString(), query)
+        public Value(double value, Query query) : base(query)
         {
             QueryExtension(value.ToString());
         }

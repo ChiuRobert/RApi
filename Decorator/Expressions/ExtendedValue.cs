@@ -7,16 +7,14 @@ namespace ScotchBoardSQL.Decorator.Expressions
     /// </summary>
     public class ExtendedValue : Value
     {
-        public ExtendedValue(string value, Query query) : base(value, query)
+        public ExtendedValue(string value, Query query) : base(query)
         {
-            QueryExtension(value);
-            FormatQuery(value.Length);
+            QueryExtension("\"" + value + "\"");
         }
 
-        public ExtendedValue(double value, Query query) : base(value, query)
+        public ExtendedValue(double value, Query query) : base(query)
         {
             QueryExtension(value.ToString());
-            FormatQuery(value.ToString().Length);
         }
 
         /// <summary>

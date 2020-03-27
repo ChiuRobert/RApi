@@ -9,7 +9,7 @@ namespace ScotchBoardSQL.Decorator
     {
         public InsertQuery(Query query) : base(query)
         {
-            QueryExtension("INSERT INTO " + query.table + " (");
+            QueryExtension("INSERT INTO \"" + query.schema + "\".\"" + query.table + "\" (");
         }
 
         /// <summary>

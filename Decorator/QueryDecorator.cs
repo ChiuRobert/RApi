@@ -18,11 +18,6 @@ namespace ScotchBoardSQL.Decorator
             this.query = query;
         }
 
-        protected QueryDecorator(string value, Query query) : this(query)
-        {
-            QueryExtension(value);
-        }
-
         /// <summary>
         /// Utility method used to add the parameter to the internal query
         /// </summary>

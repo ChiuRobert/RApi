@@ -19,13 +19,19 @@ namespace ScotchBoardSQL
         internal string table;
 
         /// <summary>
+        /// Name of the schema in which the queries will take place
+        /// </summary>
+        internal string schema;
+
+        /// <summary>
         /// 
         /// </summary>
         /// <param name="table">Name of the table the query will be made upon</param>
-        public Query(string table)
+        public Query(string schema, string table)
         {
             QueryCleaner.INSTANCE.AddQuery(this);
             this.table = table;
+            this.schema = schema;
         }
 
         /// <summary>

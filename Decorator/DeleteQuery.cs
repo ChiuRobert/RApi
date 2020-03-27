@@ -9,7 +9,7 @@ namespace ScotchBoardSQL.Decorator
     {
         public DeleteQuery(Query query) : base(query)
         {
-            QueryExtension("DELETE FROM " + query.table);
+            QueryExtension("DELETE FROM \"" + query.schema + "\".\"" + query.table + "\"");
         }
 
         /// <summary>
