@@ -40,10 +40,11 @@ namespace ScotchBoardSQL.Decorator.Expressions
         /// <summary>
         /// Enables the query use of ORDER BY 
         /// </summary>
+        /// <param name="columnName">name of the column</param>
         /// <returns>Order</returns>
-        public Order OrderBy()
+        public Order OrderBy(string columnName)
         {
-            return new Order(query);
+            return new Order(columnName, query);
         }
     }
 }

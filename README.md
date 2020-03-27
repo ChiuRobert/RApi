@@ -24,13 +24,13 @@ string selectQuery = new Query("tableName").Select().Where().
     Column("firstColumnName").Less().Value("givenValue").
     And().
     Column("secondColumnName").Higher().Value(42).
-    OrderBy().Asc().Execute();
+    OrderBy("someColumn").Asc().Execute();
 ```
 
 with the outcome:
 
 ```SQL
-SELECT * FROM tableName WHERE firstColumnName < givenValue AND secondColumnName > 42 ORDER BY ASC;
+SELECT * FROM tableName WHERE firstColumnName < givenValue AND secondColumnName > 42 ORDER BY someColumn ASC;
 ```
 
 For UPDATE queries:

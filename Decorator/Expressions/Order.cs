@@ -5,9 +5,9 @@
     /// </summary>
     public class Order : QueryDecorator
     {
-        public Order(Query query) : base(query)
+        public Order(string columnName, Query query) : base(query)
         {
-            QueryExtension(" ORDER BY ");
+            QueryExtension(" ORDER BY " + columnName + " ");
         }
 
         /// <summary>
