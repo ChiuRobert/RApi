@@ -11,6 +11,12 @@ namespace ScotchBoardSQL
         /// Adds the WHERE keyword in the query
         /// </summary>
         /// <returns>Where</returns>
-        Where<ExtendedValue> Where(); 
+        Where<ExtendedValue> Where();
+
+        /// <summary>
+        /// Formats the query for final changes
+        /// </summary>
+        /// <returns>formatted query</returns>
+        string Execute();
     }
 }

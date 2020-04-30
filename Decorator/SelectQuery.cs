@@ -20,5 +20,14 @@ namespace ScotchBoardSQL.Decorator
         {
             return new Where<ExtendedValue>(query);
         }
+
+        /// <summary>
+        /// Formats the query for final changes
+        /// </summary>
+        /// <returns>formatted query</returns>
+        public string Execute()
+        {
+            return new Execution(query).Execute();
+        }
     }
 }
