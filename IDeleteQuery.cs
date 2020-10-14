@@ -12,5 +12,11 @@ namespace ScotchBoardSQL
         /// </summary>
         /// <returns>Where</returns>
         Where<Value> Where();
+        
+        /// <summary>
+        /// Formats the query for final changes
+        /// </summary>
+        /// <returns>formatted query</returns>
+        string Execute();
     }
 }

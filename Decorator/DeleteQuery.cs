@@ -7,8 +7,11 @@ namespace ScotchBoardSQL.Decorator
     /// </summary>
     internal class DeleteQuery : QueryDecorator, IDeleteQuery
     {
+        private readonly string internalDeleteQuery;
+        
         public DeleteQuery(Query query) : base(query)
         {
+            internalDeleteQuery = query.internalQuery + ("DELETE FROM " + query.table + ";");
             QueryExtension("DELETE FROM \"" + query.schema + "\".\"" + query.table + "\"");
         }
 
@@ -19,6 +22,15 @@ namespace ScotchBoardSQL.Decorator
         public Where<Value> Where()
         {
             return new Where<Value>(query);
+        }
+
+        /// <summary>
+        /// Formats the query for final changes
+        /// </summary>
+        /// <returns>formatted query</returns>
+        public string Execute()
+        {
+            return internalDeleteQuery;
         }
     }
 }
